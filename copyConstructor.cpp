@@ -38,6 +38,13 @@ public:
   Array(const Array &arrObj) : n(arrObj.n)
   {
     std::cout << "Custom deep copy constructor called" << "\n";
+    std::cout << "The Address allocated to the arrObj.ref = arrObj.ref = " << (arrObj.ref) << "\n";
+    std::cout << "Address where ref is stored = &(arrObj.ref) = " << &(arrObj.ref) << '\n';
+    
+    std::cout << "------\n";
+
+    std::cout << "The Address allocated to the ref = ref = " << ref << "\n";
+    std::cout << "Address where ref is stored = &ref = " << &ref << '\n';
     ref = new int[n];
     for (int i = 0; i < n; i++)
     {
@@ -91,13 +98,24 @@ int main()
 
     OUPUT AFTER CUSTOM DEEP COPY CONSTRUCTOR:
 
-    The Address allocated to the ref = ref = 0xd212a0        
+    The Address allocated to the ref = ref = 0x7212a0
     Address where ref is stored = &ref = 0x61fe08
     Custom deep copy constructor called
+    The Address allocated to the arrObj.ref = arrObj.ref = 0x7212a0
+    Address where ref is stored = &(arrObj.ref) = 0x61fe08
+    ------
+    The Address allocated to the ref = ref = 0x401519
+    Address where ref is stored = &ref = 0x61fdf8
     n value of 1st instance 10
     Array values of 1st instance After changing arr2 instance
-    2 2 2 2 2 2 2 2 2 2 
+    2 2 2 2 2 2 2 2 2 2
     Custom deep copy constructor called
+    The Address allocated to the arrObj.ref = arrObj.ref = 0x7212a0
+    Address where ref is stored = &(arrObj.ref) = 0x61fe08
+    ------
+    The Address allocated to the ref = ref = 0
+    Address where ref is stored = &ref = 0x61fde8
+  
   */
 
   return 0;
