@@ -9,11 +9,14 @@ class Person{
   public:
     void getDetails(){
       // function body
+      std::cout << "getDetails Function invoked.\n" ;
     }
 };
 
 int main()
 {
   Person p1;
+  p1.getDetails();
+
   return 0;
 }
