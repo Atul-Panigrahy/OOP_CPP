@@ -15,35 +15,41 @@
 
 # include <iostream>
 
-// Member initialzer list
+int globalvariable;
+
 class Employee{
   public:
    std::string id, name;
    int years;
 
-   Employee(std::string id, std::string name, int year):id(id), name(name), years(years)
-   {  
-     std::cout << "Member initializer list." << "\n";
-   }
+    Employee()
+    {  
+      std::cout << "Class Number " << globalvariable << "\n";
+      ++ globalvariable;
+    }
 
-   /*
-      // equivalent to
-      Employee(std::string id, std::string name, int years)
-      {  
-        this -> id = id;
-        this -> name = name;
-        this -> years = years;
-        std::cout << "Member initializer list." << "\n";
-      }
-   */
+    Employee(std::string id, std::string name, int year):id(id), name(name), years(years)
+    {  
+      std::cout << "Through member initializer list" << "\n"; 
+      std::cout << "Class Number " << globalvariable << "\n";
+      ++ globalvariable;
+    }
+   
 };
 
 
 int main()
 {
-  Employee e1("E1C56", "Sample Employee", 23);
+  Employee e1, e2, e3("E1C56", "Sample Employee", 23);
   
   return 0 ;
 }
 
 
+/*
+  OUTPUT:
+  Class Number 0
+  Class Number 1
+  Through member initializer list
+  Class Number 2
+*/
