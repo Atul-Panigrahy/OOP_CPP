@@ -15,7 +15,7 @@
 
 # include <iostream>
 
-int globalvariable;
+int globalvariable; // global variable assigned 0 by default
 
 class Employee{
   public:
