@@ -3,7 +3,9 @@
 /*
   1. 'this' keyword store the address of the current object that you are working 
       with.
-  2. 'this' pointer is not 
+  2. 'this' pointer is not  available in static member functions as static member functions
+      can be called without any object.
+  
 */
 
 class Hannah
