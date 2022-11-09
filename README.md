@@ -8,6 +8,6 @@ In sequence
 5. [destructor.cpp](destructor.cpp)
 6. [encapsulation.cpp](encapsulation.cpp)
 6. [abstraction.cpp](abstraction.cpp)
-7. [thisPointer.cpp][thisPointer.cpp]
-8. [static.cpp][static.cpp]
-9. 
+7. [thisPointer.cpp](thisPointer.cpp)
+8. [static.cpp](static.cpp)
+9. [friend.cpp](friend.cpp)
